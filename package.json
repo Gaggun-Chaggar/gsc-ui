@@ -1,0 +1,29 @@
+{
+  "name": "gsc-ui",
+  "private": true,
+  "packageManager": "yarn@3.0.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Gaggun-Chaggar/gsc-ui.git",
+  "author": "Gaggun Chaggar <gaggunchaggar@gmail.com>",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/gsc/*",
+    "packages/gsc-ui/*"
+  ],
+  "scripts": {
+    "ws:core": "yarn workspace @gsc-ui/core",
+    "ws:vue": "yarn workspace @gsc-ui/vue",
+    "ws:react": "yarn workspace @gsc-ui/react",
+    "ws:utils": "yarn workspace @gsc/utils",
+    "ws:sb": "yarn workspace @gsc/sb",
+    "g:tsc": "cd $INIT_CWD && tsc",
+    "g:sass": "cd $INIT_CWD && sass",
+    "build": "yarn workspaces foreach -ptR --from '{@gsc-ui/core, @gsc-ui/vue, @gsc-ui/react, @gsc/utils}' run build"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "sass": "^1.52.1",
+    "typescript": "4.6.3"
+  }
+}

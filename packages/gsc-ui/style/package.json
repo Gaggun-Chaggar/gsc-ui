@@ -1,0 +1,24 @@
+{
+  "name": "@gsc-ui/style",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "prettier --write src/**/*.ts && tsc",
+    "format": "echo \"sass don't need no formatin'\"",
+    "format-check": "echo \"sass don't need no formatin'\"",
+    "sass:build": "yarn g:sass src/min.sass dist/min.css",
+    "sass:watch": "yarn g:sass -w src/min.sass dist/min.css",
+    "build": "yarn sass:build"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "tslib": "2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.8"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@gsc-ui/sb",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "prettier --write src/**/*.t",
+    "format": "prettier --write src/**/*.js",
+    "format-check": "prettier --check src/**/*.js",
+    "build": "echo 'no build'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@gsc-ui/vue": "workspace:packages/gsc-ui/vue",
+    "@gsc/utils": "workspace:packages/gsc/utils",
+    "tslib": "2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.12",
+    "@types/node": "^16.4.8",
+    "babel-loader": "^8.2.5",
+    "vue": "^3.2.36",
+    "vue-loader": "^16.8.3"
+  }
+}

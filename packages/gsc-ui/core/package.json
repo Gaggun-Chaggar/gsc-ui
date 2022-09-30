@@ -1,0 +1,25 @@
+{
+  "name": "@gsc-ui/core",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "prettier --write src/**/*.ts && tsc",
+    "format": "prettier --write src/**/*.ts",
+    "format-check": "prettier --check src/**/*.ts",
+    "ts:build": "yarn g:tsc",
+    "ts:watch": "yarn g:tsc -w",
+    "build": "yarn ts:build"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@gsc/utils": "workspace:packages/gsc/utils",
+    "tslib": "2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.8"
+  }
+}
