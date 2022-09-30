@@ -19,9 +19,7 @@ export const GscCardTitle = defineComponent({
 
     const defaultSlot = ctxSlots('default')
 
-    const r = coreGscCardTitle(s)(props)
-
-    return r(h, defaultSlot())
+    return () => coreGscCardTitle(s)(props)(h, defaultSlot())
   },
 })
 

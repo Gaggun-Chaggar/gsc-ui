@@ -16,7 +16,7 @@ export const coreGscCardHeader =
     const cls = () =>
       normaliseClass([
         s.get('card-header'),
-        props.bg && s.get(append('bg')(props.bg)),
+        props.bg && s.get(append('card-header')(props.bg)),
         props.fg && s.get(append('fg')(props.fg)),
       ])
 

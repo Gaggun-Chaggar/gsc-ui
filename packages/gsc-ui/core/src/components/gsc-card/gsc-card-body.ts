@@ -16,7 +16,7 @@ export const coreGscCardBody =
     const cls = () =>
       normaliseClass([
         s.get('card-body'),
-        props.bg && s.get(append('bg')(props.bg)),
+        props.bg && s.get(append('card-body')(props.bg)),
         props.fg && s.get(append('fg')(props.fg)),
       ])
 

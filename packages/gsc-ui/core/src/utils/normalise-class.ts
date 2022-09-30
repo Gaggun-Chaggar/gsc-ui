@@ -11,7 +11,10 @@ export const normaliseClass = (
   }
 
   if (isArray(cls)) {
-    return cls.map((c) => normaliseClass(c)).join(' ')
+    return cls
+      .map((c) => normaliseClass(c))
+      .join(' ')
+      .trim()
   }
 
   if (isObject(cls)) {
@@ -19,6 +22,7 @@ export const normaliseClass = (
       .map(([c, v]) => (v ? c : undefined))
       .filter(Boolean)
       .join(' ')
+      .trim()
   }
 
   return ''

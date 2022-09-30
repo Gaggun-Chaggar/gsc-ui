@@ -16,7 +16,7 @@ export const coreGscCardFooter =
     const cls = () =>
       normaliseClass([
         s.get('card-footer'),
-        props.bg && s.get(append('bg')(props.bg)),
+        props.bg && s.get(append('card-footer')(props.bg)),
         props.fg && s.get(append('fg')(props.fg)),
       ])
 

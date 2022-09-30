@@ -29,9 +29,7 @@ export const GscButton = defineComponent({
       },
     }
 
-    const r = coreGscButton(s)(props, events)
-
-    return () => r(h, defaultSlot())
+    return () => coreGscButton(s)(props, events)(h, defaultSlot())
   },
 })
 export const gscButton = h(GscButton)

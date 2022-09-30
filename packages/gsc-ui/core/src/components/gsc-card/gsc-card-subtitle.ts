@@ -16,7 +16,7 @@ export const coreGscCardSubtitle =
     const cls = () =>
       normaliseClass([
         s.get('card-subtitle'),
-        props.bg && s.get(append('bg')(props.bg)),
+        props.bg && s.get(append('card-subtitle')(props.bg)),
         props.fg && s.get(append('fg')(props.fg)),
       ])
 

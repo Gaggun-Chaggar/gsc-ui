@@ -18,7 +18,8 @@
   "dependencies": {
     "@gsc-ui/vue": "workspace:packages/gsc-ui/vue",
     "@gsc/utils": "workspace:packages/gsc/utils",
-    "tslib": "2.1.0"
+    "tslib": "2.1.0",
+    "webpack": "4.46"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -29,7 +30,9 @@
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/vue3": "^6.5.12",
     "@types/node": "^16.4.8",

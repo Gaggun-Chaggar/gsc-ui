@@ -17,6 +17,7 @@ export const GscSettings = defineComponent({
     const defaultSlot = ctxSlots('default')
 
     const settings = computed(() => createSettings(props.classes))
+    console.log({ settings: settings.value })
 
     provide(SETTINGS, settings)
 

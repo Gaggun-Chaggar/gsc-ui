@@ -276,7 +276,7 @@ export type ClassList = typeof classList
 export type Classes = ClassList[number]
 
 export const classMap = classList.reduce(
-  (a, b) => ({ ...a, b }),
+  (a, b) => ({ ...a, [b]: b }),
   {}
 ) as ArrayToSelfReferringRecord<RecordToArray<BaseClasses>[]>
 

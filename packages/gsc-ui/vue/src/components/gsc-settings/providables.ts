@@ -8,6 +8,7 @@ export const useSettings = (): SettingsCtx<Ref<Settings>> => {
   const settings = inject(SETTINGS, _defaultSettings)
 
   const get = (cls: Classes) => settings.value.classes[cls]
+  console.log({ defaultSettings })
 
   return {
     _settings: settings,

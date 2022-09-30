@@ -19,9 +19,7 @@ export const GscCardFooter = defineComponent({
 
     const defaultSlot = ctxSlots('default')
 
-    const r = coreGscCardFooter(s)(props)
-
-    return r(h, defaultSlot())
+    return () => coreGscCardFooter(s)(props)(h, defaultSlot())
   },
 })
 
