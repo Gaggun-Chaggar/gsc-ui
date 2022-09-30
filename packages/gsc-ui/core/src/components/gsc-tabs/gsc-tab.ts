@@ -29,7 +29,7 @@ export const coreGscTab =
           href: '#',
           'aria-selected': props.active,
           'aria-setsize': props.setsize,
-          'aria-posinset': props.index,
+          'aria-posinset': props.index + 1,
           'aria-controls': props.controls,
           onClick: events.onClick,
         })(children),
