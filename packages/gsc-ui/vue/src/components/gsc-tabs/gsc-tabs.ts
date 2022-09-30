@@ -18,13 +18,14 @@ export const GscTabs = defineComponent({
     const s = useSettings()
 
     const events: Events<Event> = {
-      onClick: (e) => {
-        ctx.emit('click', e)
+      onClick: (e, i) => {
+        e.preventDefault()
+        ctx.emit('click', e, i)
       },
     }
 
     const slotKeys = keys(ctx.slots).map((s) => String(s))
-    let _slots: Slots<any>
+    let _slots: Slots<any> = { tabs: {} }
 
     slotKeys.forEach((s) => {
       const isContent = s.endsWith('-content')
@@ -49,16 +50,15 @@ export const GscTabs = defineComponent({
     })
 
     const state = reactive({
-      activeTab: '',
+      activeTab: keys(_slots.tabs)[0],
     })
 
     const activateTab = (id: string) => {
       state.activeTab = id
     }
 
-    const r = coreGscTabs(s)(props, events, state, { activateTab })
-
-    return () => r(h, _slots)
+    return () =>
+      coreGscTabs(s)(props, events, state, { activateTab })(h, _slots)
   },
 })
 export const gscTabs = h(GscTabs)
