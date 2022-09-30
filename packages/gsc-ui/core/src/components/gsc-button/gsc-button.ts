@@ -24,14 +24,14 @@ export const coreGscButton =
       normaliseClass([
         s.get('btn'),
         s.get(append('btn')(props.bg || 'primary')),
-        s.get(append('btn')(props.fg || 'white')),
+        s.get(append('fg')(props.fg || 'white')),
         props.size && s.get(append('btn')(props.size)),
         props.radius && s.get(append('radius')(props.radius)),
       ])
 
     const render = (h: H, children: any) =>
       h('button')({
-        diasbled: props.disabled,
+        disabled: props.disabled,
         [clsAttrName]: cls(),
         onClick: events.onClick,
       })(children)
