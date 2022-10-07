@@ -29,5 +29,5 @@ const Template = (args) => ({
     `,
 })
 
-export const MyCard = Template.bind({})
-MyCard.args = {}
+export const MyTabs = Template.bind({})
+MyTabs.args = {}
