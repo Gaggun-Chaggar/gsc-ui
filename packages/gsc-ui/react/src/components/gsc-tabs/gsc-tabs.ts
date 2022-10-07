@@ -23,7 +23,7 @@ export const GscTabs = (props: RProps) => {
   const events = {
     onClick: (e: MouseEvent<HTMLButtonElement>, i: number) => {
       e.preventDefault()
-      props.onClick(e, i)
+      if (props.onClick) props.onClick(e, i)
     },
   }
 

@@ -7,7 +7,7 @@ import { entries } from '@gsc/utils'
 export type Props = {}
 
 export type Events<E> = {
-  onClick: (e: E, index: number) => any
+  onClick?: (e: E, index: number) => any
 }
 
 export type Slots<R extends any[]> = {
@@ -29,7 +29,7 @@ export type Methods = {
 }
 
 export const coreGscTabs = <S>(s: SettingsCtx<S>, clsAttrName = 'class') => {
-  const tab = coreGscTab(s)
+  const tab = coreGscTab(s, clsAttrName)
 
   return <E>(_: Props, events: Events<E>, state: State, methods: Methods) => {
     const cls = () => normaliseClass([s.get('tabs')])
@@ -40,7 +40,7 @@ export const coreGscTabs = <S>(s: SettingsCtx<S>, clsAttrName = 'class') => {
       h('div')({
         [clsAttrName]: cls(),
       })([
-        h('div')()(
+        h('div')()([
           h('ul')({
             [clsAttrName]: tabListCls(),
             role: 'tablist',
@@ -56,18 +56,18 @@ export const coreGscTabs = <S>(s: SettingsCtx<S>, clsAttrName = 'class') => {
                 {
                   onClick: (e: E) => {
                     methods.activateTab(id)
-                    events.onClick(e, i)
+                    if (events.onClick) events.onClick(e, i)
                   },
                 }
               )(h, t.title())
             )
-          )
-        ),
-        h('div')()(
+          ),
+        ]),
+        h('div')()([
           h('div')({
             [clsAttrName]: s.get('tab-content'),
-          })(slots.tabs[state.activeTab].content())
-        ),
+          })(slots.tabs[state.activeTab].content()),
+        ]),
       ])
 
     return render
