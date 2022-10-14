@@ -9,13 +9,14 @@ import { slots } from '../../utils/slots'
 import { useSettings } from '../gsc-settings/providables'
 import { names } from '@gsc-ui/core/dist/components/gsc-button/names'
 
-export const props = () => ({
-  size: String as PropType<Size>,
-  radius: String as PropType<Size>,
-  bg: String as PropType<Colour>,
-  fg: String as PropType<Colour>,
-  disabled: Boolean,
-})
+export const props = () =>
+  ({
+    size: String as PropType<Size>,
+    radius: String as PropType<Size>,
+    bg: String as PropType<Colour>,
+    fg: String as PropType<Colour>,
+    disabled: Boolean,
+  } as const)
 
 export const GscButton = defineComponent({
   name: names['gsc-button'],

@@ -3,12 +3,13 @@ import { ClassMap, createSettings } from '@gsc-ui/core'
 import { SETTINGS } from './providables'
 import { slots } from '../../utils/slots'
 
-export const props = () => ({
-  classes: {
-    default: () => ({}),
-    type: Object as PropType<ClassMap>,
-  },
-})
+export const props = () =>
+  ({
+    classes: {
+      default: () => ({}),
+      type: Object as PropType<ClassMap>,
+    },
+  } as const)
 
 export const GscSettings = defineComponent({
   name: 'gsc-settings',

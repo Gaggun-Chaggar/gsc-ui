@@ -1,12 +1,14 @@
-import { defineComponent, PropType, h } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import { coreGscAlert } from '@gsc-ui/core/dist/components/gsc-alert/gsc-alert'
 import { useSettings } from '../gsc-settings/providables'
 import { slots } from '../../utils/slots'
+import { h } from '../../utils'
 import { names } from '@gsc-ui/core/dist/components/gsc-alert/names'
 
-export const props = () => ({
-  tag: String as PropType<string>,
-})
+export const props = () =>
+  ({
+    tag: String as PropType<string>,
+  } as const)
 
 export const GscAlert = defineComponent({
   name: names['gsc-alert'],

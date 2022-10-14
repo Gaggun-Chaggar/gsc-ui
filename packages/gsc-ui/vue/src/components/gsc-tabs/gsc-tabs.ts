@@ -10,7 +10,7 @@ import { useSettings } from '../gsc-settings/providables'
 import { keys } from '@gsc/utils'
 import { names } from '@gsc-ui/core/dist/components/gsc-tabs/names'
 
-export const props = () => ({})
+export const props = () => ({} as const)
 
 export const GscTabs = defineComponent({
   name: names['gsc-tabs'],
