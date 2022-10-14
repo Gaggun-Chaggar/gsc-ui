@@ -8,10 +8,12 @@ import { defineComponent, reactive } from 'vue'
 import { slots } from '../../utils/slots'
 import { useSettings } from '../gsc-settings/providables'
 import { keys } from '@gsc/utils'
+import { names } from '@gsc-ui/core/dist/components/gsc-tabs/names'
 
 export const props = () => ({})
 
 export const GscTabs = defineComponent({
+  name: names['gsc-tabs'],
   props: props(),
   setup(props, ctx) {
     const ctxSlots = slots(ctx)

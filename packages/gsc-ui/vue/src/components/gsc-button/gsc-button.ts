@@ -7,6 +7,7 @@ import { h } from '../../utils'
 import { defineComponent, PropType } from 'vue'
 import { slots } from '../../utils/slots'
 import { useSettings } from '../gsc-settings/providables'
+import { names } from '@gsc-ui/core/dist/components/gsc-button/names'
 
 export const props = () => ({
   size: String as PropType<Size>,
@@ -17,10 +18,11 @@ export const props = () => ({
 })
 
 export const GscButton = defineComponent({
+  name: names['gsc-button'],
   props: props(),
   setup(props, ctx) {
-    const ctxSlots = slots(ctx)
     const s = useSettings()
+    const ctxSlots = slots(ctx)
     const defaultSlot = ctxSlots('default')
 
     const events: Events<Event> = {

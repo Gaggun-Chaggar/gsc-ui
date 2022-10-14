@@ -1,3 +1,5 @@
+export * from './gsc-accordion'
+export * from './gsc-alert'
 export * from './gsc-button'
 export * from './gsc-settings'
 export * from './gsc-card'

@@ -29,7 +29,7 @@ export const coreGscAccordionItem =
       })([
         h('div')({
           [clsAttrName]: s.get('accordion-item--button-wrapper'),
-        })(
+        })([
           h('button')({
             type: 'button',
             id: props.idPrefix + '-label',
@@ -40,8 +40,8 @@ export const coreGscAccordionItem =
               methods.setShow(!state.show)
               if (events.onClick) events.onClick(e)
             },
-          })(slots.title ? slots.title() : [])
-        ),
+          })(slots.title ? slots.title() : []),
+        ]),
         h('div')({
           id: props.idPrefix + '-content',
           'aria-labelledby': props.idPrefix + '-label',

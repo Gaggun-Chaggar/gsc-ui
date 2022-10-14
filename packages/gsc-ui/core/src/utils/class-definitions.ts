@@ -112,6 +112,13 @@ export const baseClasses = {
     self: true,
     extendedPosition: false,
   },
+  alert: {
+    position: false,
+    size: false,
+    colour: false,
+    self: true,
+    extendedPosition: false,
+  },
   btn: {
     position: false,
     size: true,

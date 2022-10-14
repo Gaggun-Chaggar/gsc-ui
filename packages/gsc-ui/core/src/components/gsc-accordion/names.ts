@@ -1,4 +1,4 @@
 export const names = {
   'gsc-accordion': 'gsc-accordion',
-  'gsc-accordion-group': 'gsc-accordion-group',
+  'gsc-accordion-item': 'gsc-accordion-item',
 } as const

@@ -7,6 +7,7 @@ import { h } from '../../utils'
 import { defineComponent, reactive } from 'vue'
 import { slots } from '../../utils/slots'
 import { useSettings } from '../gsc-settings/providables'
+import { names } from '@gsc-ui/core/dist/components/gsc-accordion/names'
 
 export const props = () =>
   ({
@@ -17,6 +18,7 @@ export const props = () =>
   } as const)
 
 export const GscAccordionItem = defineComponent({
+  name: names['gsc-accordion-item'],
   props: props(),
   setup(props, ctx) {
     const ctxSlots = slots(ctx)

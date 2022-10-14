@@ -11,13 +11,13 @@ export const props = () => ({
 })
 
 export const GscSettings = defineComponent({
+  name: 'gsc-settings',
   props: props(),
   setup(props, ctx) {
     const ctxSlots = slots(ctx)
     const defaultSlot = ctxSlots('default')
 
     const settings = computed(() => createSettings(props.classes))
-    console.log({ settings: settings.value })
 
     provide(SETTINGS, settings)
 
