@@ -1,2 +1,3 @@
 # gsc-ui
-UI Lib
+
+Style agnostic UI Library (in progress)
